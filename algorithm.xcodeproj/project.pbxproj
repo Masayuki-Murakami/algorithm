@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5665C602A131B6000C5C9BB /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5665C5F2A131B6000C5C9BB /* Sorting.swift */; };
 		F5D623FB2A0DAE9700B20634 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D623FA2A0DAE9700B20634 /* main.swift */; };
 		F5D624032A0DBF3C00B20634 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D624022A0DBF3C00B20634 /* Array.swift */; };
 		F5D624062A0F76BF00B20634 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D624052A0F76BF00B20634 /* String.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F5665C5F2A131B6000C5C9BB /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		F5D623F72A0DAE9700B20634 /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D623FA2A0DAE9700B20634 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F5D624022A0DBF3C00B20634 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -61,27 +63,12 @@
 		F5D623F92A0DAE9700B20634 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
-				F5D624042A0F76A900B20634 /* String */,
-				F5D624012A0DBF2900B20634 /* Array */,
+				F5665C5F2A131B6000C5C9BB /* Sorting.swift */,
+				F5D624052A0F76BF00B20634 /* String.swift */,
+				F5D624022A0DBF3C00B20634 /* Array.swift */,
 				F5D623FA2A0DAE9700B20634 /* main.swift */,
 			);
 			path = algorithm;
-			sourceTree = "<group>";
-		};
-		F5D624012A0DBF2900B20634 /* Array */ = {
-			isa = PBXGroup;
-			children = (
-				F5D624022A0DBF3C00B20634 /* Array.swift */,
-			);
-			path = Array;
-			sourceTree = "<group>";
-		};
-		F5D624042A0F76A900B20634 /* String */ = {
-			isa = PBXGroup;
-			children = (
-				F5D624052A0F76BF00B20634 /* String.swift */,
-			);
-			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +131,7 @@
 			files = (
 				F5D624062A0F76BF00B20634 /* String.swift in Sources */,
 				F5D623FB2A0DAE9700B20634 /* main.swift in Sources */,
+				F5665C602A131B6000C5C9BB /* Sorting.swift in Sources */,
 				F5D624032A0DBF3C00B20634 /* Array.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

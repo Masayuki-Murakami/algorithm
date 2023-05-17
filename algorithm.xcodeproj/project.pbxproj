@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F5665C602A131B6000C5C9BB /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5665C5F2A131B6000C5C9BB /* Sorting.swift */; };
+		F5665C622A1472B000C5C9BB /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5665C612A1472B000C5C9BB /* BinarySearch.swift */; };
 		F5D623FB2A0DAE9700B20634 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D623FA2A0DAE9700B20634 /* main.swift */; };
 		F5D624032A0DBF3C00B20634 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D624022A0DBF3C00B20634 /* Array.swift */; };
 		F5D624062A0F76BF00B20634 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D624052A0F76BF00B20634 /* String.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		F5665C5F2A131B6000C5C9BB /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
+		F5665C612A1472B000C5C9BB /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 		F5D623F72A0DAE9700B20634 /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D623FA2A0DAE9700B20634 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F5D624022A0DBF3C00B20634 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		F5D623F92A0DAE9700B20634 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				F5665C612A1472B000C5C9BB /* BinarySearch.swift */,
 				F5665C5F2A131B6000C5C9BB /* Sorting.swift */,
 				F5D624052A0F76BF00B20634 /* String.swift */,
 				F5D624022A0DBF3C00B20634 /* Array.swift */,
@@ -133,6 +136,7 @@
 				F5D623FB2A0DAE9700B20634 /* main.swift in Sources */,
 				F5665C602A131B6000C5C9BB /* Sorting.swift in Sources */,
 				F5D624032A0DBF3C00B20634 /* Array.swift in Sources */,
+				F5665C622A1472B000C5C9BB /* BinarySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

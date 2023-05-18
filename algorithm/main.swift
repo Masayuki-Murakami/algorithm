@@ -36,3 +36,10 @@ print("----------(BinarySearch)----------")
 print(searchInsert([1,3,5,6], 2))
 
 print(mySqrt(8))
+
+print("----------(Recursion)----------")
+
+testCase1mergeTwoLists()
+print("--")
+testCase2removeElements()
+

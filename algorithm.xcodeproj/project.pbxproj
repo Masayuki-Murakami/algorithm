@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F528ACA82A15EA0A00D67C0B /* Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528ACA72A15EA0A00D67C0B /* Recursion.swift */; };
 		F5665C602A131B6000C5C9BB /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5665C5F2A131B6000C5C9BB /* Sorting.swift */; };
 		F5665C622A1472B000C5C9BB /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5665C612A1472B000C5C9BB /* BinarySearch.swift */; };
 		F5D623FB2A0DAE9700B20634 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D623FA2A0DAE9700B20634 /* main.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F528ACA72A15EA0A00D67C0B /* Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recursion.swift; sourceTree = "<group>"; };
 		F5665C5F2A131B6000C5C9BB /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		F5665C612A1472B000C5C9BB /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 		F5D623F72A0DAE9700B20634 /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 		F5D623F92A0DAE9700B20634 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				F528ACA72A15EA0A00D67C0B /* Recursion.swift */,
 				F5665C612A1472B000C5C9BB /* BinarySearch.swift */,
 				F5665C5F2A131B6000C5C9BB /* Sorting.swift */,
 				F5D624052A0F76BF00B20634 /* String.swift */,
@@ -132,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F528ACA82A15EA0A00D67C0B /* Recursion.swift in Sources */,
 				F5D624062A0F76BF00B20634 /* String.swift in Sources */,
 				F5D623FB2A0DAE9700B20634 /* main.swift in Sources */,
 				F5665C602A131B6000C5C9BB /* Sorting.swift in Sources */,

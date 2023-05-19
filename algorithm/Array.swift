@@ -41,3 +41,39 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
   }
   return k + 1
 }
+
+
+func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
+  // Initalaize k to count nums that are not equal to val
+  var k = 0
+  
+  for i in 0..<nums.count {
+    if nums[i] != val {
+      // Overwrite nums[i] to nums[k] to remove nums[k] and raise num of k to count nums that aren;t equal and that num will be the next place to be substitute.
+      nums[k] = nums[i]
+      k += 1
+    }
+  }
+  return k
+}
+
+
+func plusOne(_ digits: [Int]) -> [Int] {
+  // copy the digits to change a element of the array. Because a parameter is let
+  var digits = digits
+  
+  // check each element from the last if it is 9. if it is 9, return digits. Then finishs the function
+  for i in (0..<digits.count).reversed() {
+    if digits[i] == 9 {
+      digits[i] = 0
+    } else {
+      digits[i] += 1
+      return digits
+    }
+  }
+  
+  // if all of the elements are 9, insert 1 at first of the array
+  digits.insert(1, at: 0)
+  return digits
+}
+    

@@ -26,6 +26,10 @@ print(romanToInt("MCMXCIV"))
 var strs = ["flower","flow","flight"]
 print(longestCommonPrefix(strs))
 
+print(isValid("()[]{}"))
+
+print(strStr("abcdef", "ef"))
+
 
 print("----------(Sort)----------")
 

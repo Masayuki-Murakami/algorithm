@@ -63,3 +63,47 @@ func longestCommonPrefix(_ strs: [String]) -> String {
   }
   return prefix
 }
+
+// Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+func isValid(_ s: String) -> Bool {
+  
+  var stack: [Character] = []
+  let map: [Character: Character] = [")": "(", "]": "[", "}": "{"]
+  
+  for char in s {
+    // if char is equal to key of the map, it will be true. And assign a value of the map to the openingBracket.
+    if let openingBracket = map[char] {
+      if stack.isEmpty || stack.last != openingBracket { // if the stack is not empty and not equal to the last element of stack, return false.
+        return false
+      }
+      stack.removeLast() // if the value of map is equal to last element of the stack, remove the last element in the stack.
+    } else {
+      // if the char isn't closing bracket, append it to stack to check the next element if it is closing bracket.
+      stack.append(char)
+    }
+  }
+  // if there is no element in the stack, return true.
+  return stack.isEmpty
+}
+
+// Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+func strStr(_ haystack: String, _ needle: String) -> Int {
+  let n = haystack.count
+  let m = needle.count
+  
+  if m == 0 { return 0 }
+  
+  if n < m { return -1 }
+  
+  // Narrow the scope so this code doesn't need compre haystack with needle all the way to the end.
+  // Because if it can't find the index until the end(n-m), it means these strings are not equal.
+  for i in 0...(n - m) {
+    // Get a substring that is the same as long as needle until find the same string. if it can't find it, return -1
+    let substring = haystack[haystack.index(haystack.startIndex, offsetBy: i)..<haystack.index(haystack.startIndex, offsetBy: i + m)]
+    
+    if substring == needle {
+      return i
+    }
+  }
+  return -1
+}

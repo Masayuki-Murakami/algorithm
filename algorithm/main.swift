@@ -39,6 +39,10 @@ print(sortNum)
 
 print(majorityElement([2,2,1,1,1,2,2]))
 
+print(containsDuplicate([1,2,3,1]))
+
+print(isAnagram("anagram", "nagaram"))
+
 print("----------(BinarySearch)----------")
 
 print(searchInsert([1,3,5,6], 2))

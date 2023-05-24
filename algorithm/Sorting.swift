@@ -55,3 +55,29 @@ func majorityElement(_ nums: [Int]) -> Int {
   }
   return majority
 }
+
+
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+func containsDuplicate(_ nums: [Int]) -> Bool {
+  // define a new set to store unique num.
+  var set = Set<Int>()
+  
+  for num in nums {
+    // if the set has the same num as num of nums, return true
+    if set.contains(num) {
+      return true
+    } else {
+      // else insert the num to the set
+      set.insert(num)
+    }
+  }
+  return false
+}
+
+func isAnagram(_ s: String, _ t: String) -> Bool {
+  // make each sorted String. the sorted method make a string in order base on Unicode. It means s: anagram, t: nagaram -> "aagmnr"
+  let sortedS = s.sorted()
+  let sortedT = t.sorted()
+  
+  return sortedS == sortedT
+}

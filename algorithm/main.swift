@@ -49,6 +49,8 @@ print(searchInsert([1,3,5,6], 2))
 
 print(mySqrt(8))
 
+print(missingNumber([0,1,2,4,5]))
+
 print("----------(Recursion)----------")
 
 testCase1mergeTwoLists()

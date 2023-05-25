@@ -51,3 +51,29 @@ func mySqrt(_ x: Int) -> Int {
   // In this case the decimal point(小数点) must be rounded down. So return left - 1.
   return left - 1
 }
+
+// Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+func missingNumber(_ nums: [Int]) -> Int {
+  let n = nums.count
+  let expectedSum = n * (n + 1) / 2 // Get a expectedSum  ex. 0,1,2,4 -> 10
+  let actualSum = nums.reduce(0, +) // Get a actualSum using reduce method  ex. 0 + 1 + 2 + 4 = 7
+  return expectedSum - actualSum
+}
+
+
+//func firstBadVersion(_ n: Int) -> Int {
+//  var left = 1
+//  var right = n
+//
+//  while left <= right {
+//    var mid = (left + right) / 2
+//
+//    // if isBadVersion is true, it means the versions after the mid are all bad version. if it is false, the versions before mid are all good version.
+//    if isBadVersion(mid) {
+//      right = mid - 1
+//    } else {
+//      left = mid + 1
+//    }
+//  }
+//  return left
+//}

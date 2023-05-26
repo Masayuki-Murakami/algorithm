@@ -95,3 +95,36 @@ func testCase2removeElements() {
   }
 
 }
+
+// [1,2,3,4] -> [4,3,2,1]
+func reverseList(_ head: ListNode?) -> ListNode? {
+  guard let head = head else {
+    return head
+  }
+  // get the head.next until head is nil or head.next is nil. store a val in a stack and assign the last val as the revercedHead.
+  // In this proces, the list will be reversed. ex. [1,2,3,4] -> [4,3,2]
+  // The reason why a list will be reversed is that each value will be stored in a stack and taken from the top.
+  let revercedHead = reverseList(head.next)
+  
+  // need to change the pointer of the head to the head and set the head.next to nil. ex. 1->2 / 2<-1->nil
+  head.next?.next = head
+  head.next = nil
+  
+  return revercedHead ?? head
+}
+
+func testCase3reverseList() {
+  let head = ListNode(1)
+  head.next = ListNode(2)
+  head.next?.next = ListNode(3)
+  head.next?.next?.next = ListNode(4)
+  head.next?.next?.next?.next = ListNode(5)
+  
+  let result = reverseList(head)
+  
+  var node = result
+  while node != nil {
+    print(node!.val)
+    node = node!.next
+  }
+}

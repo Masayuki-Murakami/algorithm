@@ -76,4 +76,30 @@ func plusOne(_ digits: [Int]) -> [Int] {
   digits.insert(1, at: 0)
   return digits
 }
+
+// numsRow: 5 -> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+func generate(_ numRows: Int) -> [[Int]] {
+  // define a two dimensional(二次元) array
+  var result: [[Int]] = []
+  
+  for i in 0..<numRows {
+    var currentRow: [Int] = []
+    // append 1 to first num in an array
+    currentRow.append(1)
     
+    if i > 0 {
+      let prevRow = result[i - 1]
+      
+      for j in 1..<prevRow.count {
+        let sum = prevRow[j - 1] + prevRow[j]
+        currentRow.append(sum)
+      }
+    }
+    // if i is greater than 1, append 1 to the end of the currentRow
+    if i >= 1 {
+      currentRow.append(1)
+    }
+    result.append(currentRow)
+  }
+  return result
+}

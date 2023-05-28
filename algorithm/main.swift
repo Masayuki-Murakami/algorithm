@@ -18,6 +18,8 @@ print(removeElement(&num, 2))
 
 print(plusOne([1,2,3,4]))
 
+print(generate(5))
+
 
 print("----------(String)----------")
 

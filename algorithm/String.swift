@@ -107,3 +107,49 @@ func strStr(_ haystack: String, _ needle: String) -> Int {
   }
   return -1
 }
+
+
+func lengthOfLastWord(_ s: String) -> Int {
+  // remove sapaces at the begining and end.
+  let removeSpases = s.trimmingCharacters(in: .whitespacesAndNewlines)
+  
+  // saparete strings with spaces
+  let word = removeSpases.components(separatedBy: " ")
+  
+  if let lastWord = word.last {
+    return lastWord.count
+  } else {
+    return 0
+  }
+}
+
+
+// Given two binary strings a and b, return their sum as a binary string. ex. a: 1010, b: 1011 -> 10101
+func addBinary(_ a: String, _ b: String) -> String {
+  // separete each num into a array
+  let a = Array(a)
+  let b = Array(b)
+  
+  var result = ""
+  var carry = 0
+  var i = a.count - 1
+  var j = b.count - 1
+  
+  while i >= 0 || j >= 0 || carry > 0 {
+    // That's important to assign the carry to the sum.
+    var sum = carry
+    
+    if i >= 0 {
+      sum += Int(String(a[i]))!
+      i -= 1
+    }
+    if j >= 0 {
+      sum += Int(String(b[j]))!
+      j -= 1
+    }
+    carry = sum / 2        // determine if it is a carry or not.
+    sum %= 2               // 
+    result = String(sum) + result
+  }
+  return result
+}

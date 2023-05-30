@@ -32,6 +32,10 @@ print(isValid("()[]{}"))
 
 print(strStr("abcdef", "ef"))
 
+print(lengthOfLastWord(" Hello World "))
+
+print(addBinary("11", "1"))
+
 
 print("----------(Sort)----------")
 

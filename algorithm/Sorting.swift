@@ -81,3 +81,44 @@ func isAnagram(_ s: String, _ t: String) -> Bool {
   
   return sortedS == sortedT
 }
+
+// nums1: [1,2,2], nums2: [2,3,4] -> [2]
+func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+  let set1 = Set(nums1)
+  let set2 = Set(nums2)
+  // Returns a new set with the elements that are common to both this set and the given sequence.
+  let intersectionSet = set1.intersection(set2)
+  
+  return Array(intersectionSet)
+}
+
+func intersectionOneLine(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+  Array(Set(nums1).intersection(Set(nums2)))
+}
+
+
+func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+  let sorted1 = nums1.sorted() // [1,2,2,1] -> [1,1,2,2]
+  let sorted2 = nums2.sorted() // [9,4,9,8] -> [4,8,9,9]
+  
+  var intersect: [Int] = []
+  
+  var i = 0
+  var j = 0
+  // continues the while loop while both of the array are greater than i or j
+  while i < sorted1.count && j < sorted2.count {
+    // if sorted2 is greater than sorted1, switch the target to the next. else if is the same.
+    if sorted1[i] < sorted2[j] {
+       i += 1
+    } else if sorted1[i] > sorted2[j] {
+      j += 1
+    } else {
+      // if sorted1 == sorted2, append the element to the intersect. And switch both of the target to the next.
+      intersect.append(sorted1[i])
+      i += 1
+      j += 1
+    }
+  }
+  
+  return intersect
+}

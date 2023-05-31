@@ -49,6 +49,10 @@ print(containsDuplicate([1,2,3,1]))
 
 print(isAnagram("anagram", "nagaram"))
 
+print(intersectionOneLine([1,2,2], [3,2,3]))
+
+print(intersect([4,9,5], [9,4,9,8,4]))
+
 print("----------(BinarySearch)----------")
 
 print(searchInsert([1,3,5,6], 2))

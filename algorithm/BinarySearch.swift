@@ -110,3 +110,43 @@ private func helperBST(_ nums: [Int], _ left: Int, _ right: Int) -> TreeNode? {
   
   return root
 }
+
+
+func isPerfectSquare(_ num: Int) -> Bool {
+  var left = 0
+  var right = num
+  
+  while left <= right {
+    let mid = (left + right) / 2
+    let squr = mid * mid
+    if squr == num {
+      return true
+    } else if squr < num {
+      left = mid + 1
+    } else {
+      right = mid - 1
+    }
+  }
+  return false
+}
+
+
+//func guessNumber(_ n: Int) -> Int {
+//  var left = 0
+//  var right = n
+//
+//  while left <= right {
+//    let mid = (left + right) / 2
+//    if guess(mid) == 0 {
+//      return mid
+//    } else if guess(mid) == 1 {
+//      left = mid + 1
+//    } else {
+//      right = mid - 1
+//    }
+//  }
+//  return -1
+//}
+
+
+ 

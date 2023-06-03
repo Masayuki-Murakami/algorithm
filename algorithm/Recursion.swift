@@ -128,3 +128,24 @@ func testCase3reverseList() {
     node = node!.next
   }
 }
+
+
+func isPowerOfTow(_ n: Int) -> Bool {
+  if n <= 0 {
+    return false
+  }
+  
+  return helperPowerOfTwo(n)
+}
+
+private func helperPowerOfTwo(_ num: Int) -> Bool {
+  if num == 1 {
+    return true
+  }
+  
+  if num % 2 == 0 {
+    return helperPowerOfTwo(num / 2)
+  }
+  
+  return false
+}

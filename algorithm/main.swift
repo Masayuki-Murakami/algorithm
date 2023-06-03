@@ -20,6 +20,9 @@ print(plusOne([1,2,3,4]))
 
 print(generate(5))
 
+print(getRow(3))
+
+print(maxProfit([7,1,5,3,6,4]))
 
 print("----------(String)----------")
 
@@ -70,3 +73,6 @@ print("--")
 testCase2removeElements()
 print("--")
 testCase3reverseList()
+print("--")
+print(isPowerOfTow(16))
+

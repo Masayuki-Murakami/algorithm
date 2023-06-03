@@ -103,3 +103,43 @@ func generate(_ numRows: Int) -> [[Int]] {
   }
   return result
 }
+
+
+func getRow(_ rowIndex: Int) -> [Int] {
+  var result: [[Int]] = []
+  
+  for i in 0..<(rowIndex + 1) {
+    var currentRow: [Int] = []
+    
+    currentRow.append(1)
+    
+    if i > 0 {
+      let prevRow = result[i - 1]
+      
+      for j in 1..<prevRow.count {
+        let sum = prevRow[j - 1] + prevRow[j]
+        currentRow.append(sum)
+      }
+    }
+    if i >= 1 {
+      currentRow.append(1)
+    }
+    result.append(currentRow)
+  }
+  
+  return result.last!
+}
+
+func maxProfit(_ prices: [Int]) -> Int {
+  // if assigned 0 in the minPrice, the value of minPrice never change. So it has to be sssigned first price as the minPrice appropriately
+  var minPrice = Int.max
+  var maxProfit = 0
+  
+  for price in prices {
+    // first time assign the price as the minPrice. and renew the minPrice if a price is less then minPrice
+    minPrice = min(minPrice, price)
+    let profit = price - minPrice
+    maxProfit = max(maxProfit, profit)
+  }
+  return maxProfit
+}

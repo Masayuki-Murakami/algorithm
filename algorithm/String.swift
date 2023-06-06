@@ -153,3 +153,17 @@ func addBinary(_ a: String, _ b: String) -> String {
   }
   return result
 }
+
+
+func isPalindrome(_ s: String) -> Bool {
+  let remove1 = s.replacingOccurrences(of: " ", with: "")   // remove spaces
+  let remove2 = String(remove1.filter{ $0.isLetter || $0.isNumber })  // remove non-alphanumeric characters
+  let lowercase = remove2.lowercased()
+  
+  if String(lowercase.reversed()) == lowercase {
+    return true
+  }
+  
+  return false
+}
+

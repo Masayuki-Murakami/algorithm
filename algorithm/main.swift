@@ -39,6 +39,8 @@ print(lengthOfLastWord(" Hello World "))
 
 print(addBinary("11", "1"))
 
+print(isPalindrome("`l;`` 1o1 ??;l`"))
+
 
 print("----------(Sort)----------")
 

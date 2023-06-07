@@ -122,3 +122,24 @@ func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
   
   return intersect
 }
+
+
+func findTheDifference(_ s: String, _ t: String) -> Character {
+  // difine a dictonary to store each value and a count num of the same chracter of the each string
+  var charCount: [Character: Int] = [:]
+  
+  for char in s {
+    // assign each character of s and count the number of apperarances as a value of the dictionary
+    charCount[char, default: 0] += 1
+  }
+  
+  for char in t {
+    // if t has the same character in the dictionary, the key's value -1. and if a value of key is 0, remove it.
+    charCount[char, default: 0] -= 1
+    if charCount[char] == 0 {
+      charCount[char] = nil
+    }
+  }
+  
+  return charCount.keys.first!
+}

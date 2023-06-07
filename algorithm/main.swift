@@ -58,6 +58,8 @@ print(intersectionOneLine([1,2,2], [3,2,3]))
 
 print(intersect([4,9,5], [9,4,9,8,4]))
 
+print(findTheDifference("abcd", "abcde"))
+
 print("----------(BinarySearch)----------")
 
 print(searchInsert([1,3,5,6], 2))

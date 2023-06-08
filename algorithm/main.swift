@@ -70,6 +70,8 @@ print(missingNumber([0,1,2,4,5]))
 
 print(isPerfectSquare(16))
 
+print(arrangeCoins(5))
+
 print("----------(Recursion)----------")
 
 testCase1mergeTwoLists()

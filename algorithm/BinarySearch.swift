@@ -149,4 +149,22 @@ func isPerfectSquare(_ num: Int) -> Bool {
 //}
 
 
- 
+func arrangeCoins(_ n: Int) -> Int {
+  // define a min and max term number
+  var left = 0
+  var right = n
+  
+  while left <= right {
+    let mid = (left + right) / 2
+    let sum = mid * (1 + mid) / 2   // get a sum of the coins
+    
+    if sum == n {
+      return mid
+    } else if sum < n {
+      left = mid + 1
+    } else {
+      right = mid - 1
+    }
+  }
+  return right
+}

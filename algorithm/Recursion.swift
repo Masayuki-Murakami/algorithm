@@ -149,3 +149,39 @@ private func helperPowerOfTwo(_ num: Int) -> Bool {
   
   return false
 }
+
+var pointer: ListNode?
+
+func isPalindrome(_ head: ListNode?) -> Bool {
+  // hold a original node list
+  pointer = head
+  return helperIsPalindrome(head)
+}
+
+// 1. It is called recursively until Next becomes nil and starts backtracking. In other words, it goes back to the node one node before.
+// 2. it checks to see if he values the two nodes match while setting pointer to next.
+func helperIsPalindrome(_ currentNode: ListNode?) -> Bool {
+  if currentNode != nil {
+    // 1.
+    if !helperIsPalindrome(currentNode?.next) {
+      return false
+    }
+    // 2.
+    if pointer?.val != currentNode?.val {
+      return false
+    }
+    pointer = pointer?.next
+  }
+  return true
+}
+
+func testCase3isPalindrome() {
+  let head = ListNode(1)
+  head.next = ListNode(2)
+  head.next?.next = ListNode(2)
+  head.next?.next?.next = ListNode(1)
+  
+  let result = isPalindrome(head)
+  
+  print(result)
+}

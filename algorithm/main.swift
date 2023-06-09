@@ -81,4 +81,5 @@ print("--")
 testCase3reverseList()
 print("--")
 print(isPowerOfTow(16))
-
+print("--")
+testCase3isPalindrome()

@@ -24,6 +24,8 @@ print(getRow(3))
 
 print(maxProfit([7,1,5,3,6,4]))
 
+print(singleNumber([4,1,2,1,2]))
+
 print("----------(String)----------")
 
 print(romanToInt("MCMXCIV"))

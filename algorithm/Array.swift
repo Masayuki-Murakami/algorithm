@@ -143,3 +143,16 @@ func maxProfit(_ prices: [Int]) -> Int {
   }
   return maxProfit
 }
+
+// Using XOR.
+func singleNumber(_ nums: [Int]) -> Int {
+  var single = 0
+  
+  for num in nums {
+    // In the process, calculating at the binary level.
+    // ex. [1,2,2] [0, 1(01)] ->1(01), [1(01), 2(10)] -> 3(11), [3(11), 2(10)] -> 1(01) return 1
+    single ^= num
+  }
+  
+  return single
+}

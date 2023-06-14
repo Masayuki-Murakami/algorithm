@@ -167,3 +167,17 @@ func isPalindrome(_ s: String) -> Bool {
   return false
 }
 
+// 1 -> A, 28 -> AB, 701 -> ZY
+func convertToTitle(_ columnNumber: Int) -> String {
+  var n = columnNumber
+  var result = ""
+  
+  while n > 0 {
+    n -= 1 // excel string code doesn't have 0. so n needs to be - 1
+    let remainder = n % 26  // convret 10 hex to 26 hex
+    let char = Character(UnicodeScalar(remainder + 65)!)  // convart index num that is added 65 to Character of Unicode
+    result = String(char) + result // add it to the top of the result
+    n /= 26 // divides n by 26 to get a next taget num
+  }
+  return result
+}

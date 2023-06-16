@@ -62,6 +62,10 @@ print(intersect([4,9,5], [9,4,9,8,4]))
 
 print(findTheDifference("abcd", "abcde"))
 
+print(thirdMax([3,2,1]))
+
+print(findContentChildren([1,2], [1,2,3]))
+
 print("----------(BinarySearch)----------")
 
 print(searchInsert([1,3,5,6], 2))

@@ -143,3 +143,32 @@ func findTheDifference(_ s: String, _ t: String) -> Character {
   
   return charCount.keys.first!
 }
+
+func thirdMax(_ nums: [Int]) -> Int {
+  // create a new array wiht unique elements, sorted by nums in descending order
+  let sortedNums = Array(Set(nums)).sorted(by: >)
+  // if the sortedNums is less than 3, return the max num in the sortedNums
+  if sortedNums.count < 3 {
+    return sortedNums.max()!
+  }
+  // return third max num
+  return sortedNums[2]
+}
+
+func findContentChildren(_ g: [Int], _ s: [Int]) -> Int {
+  let children = g.sorted()
+  let cookies = s.sorted()
+  
+  var i = 0, j = 0
+  
+  // while children and cookies are not empty, continue the loop
+  while i < children.count && j < cookies.count {
+    // if cookie size is greater than greedy of the child, move to next child. ex. cookies[i(1)] >= children[i(1)] -> true. 
+    if cookies[j] >= children[i] {
+      i += 1
+    }
+    j += 1
+  }
+  
+  return i
+}

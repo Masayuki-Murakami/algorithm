@@ -78,6 +78,8 @@ print(isPerfectSquare(16))
 
 print(arrangeCoins(5))
 
+print(search([-1,0,3,5,9,12], 9))
+
 print("----------(Recursion)----------")
 
 testCase1mergeTwoLists()

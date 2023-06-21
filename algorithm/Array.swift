@@ -156,3 +156,22 @@ func singleNumber(_ nums: [Int]) -> Int {
   
   return single
 }
+
+func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
+  // difine a dictonary to store a num and the index of the num
+  var dict = [Int: Int]()
+  
+  // get a index and each element of the nums as a value
+  for (i, num) in nums.enumerated() {
+    // if the dict already has the same key(or num)
+    // and the difference between the current index and the last index of the same num is less than or equal to k, return true.
+    if let lastIndex = dict[num], i - lastIndex <= k {
+      return true
+    }
+    // if above if statment is false, asign the index in the dict ex. [1,2,3] -> {1,0}, {2,1}, {3,2}
+    dict[num] = i
+  }
+  
+  return false
+}
+

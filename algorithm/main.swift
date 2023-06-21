@@ -26,6 +26,8 @@ print(maxProfit([7,1,5,3,6,4]))
 
 print(singleNumber([4,1,2,1,2]))
 
+print(containsNearbyDuplicate([1,2,3,1], 3))
+
 print("----------(String)----------")
 
 print(romanToInt("MCMXCIV"))

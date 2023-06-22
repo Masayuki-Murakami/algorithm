@@ -175,3 +175,37 @@ func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
   return false
 }
 
+func summaryRanges(_ nums: [Int]) -> [String] {
+  var result = [String]()
+  
+  if nums.isEmpty { return result }
+  
+  // initalize a range
+  var start = nums[0]
+  var end = nums[0]
+  
+  for i in 1..<nums.count {
+    // check a nums[i] if it is + 1 before the num. if it is not, append start to end
+    if nums[i] != nums[i-1] + 1 {
+      result.append(formatRange(start: start, end: end))
+      // asign nums[i] as the new start of a range
+      start = nums[i]
+    }
+    // asign the nums[i] as the new end of a range
+    end = nums[i]
+  }
+  
+  // if the last num isn't indivisual num, append a last list of a range start to end
+  result.append(formatRange(start: start, end: end))
+  
+  return result
+}
+
+// make a list as a string
+func formatRange(start: Int, end: Int) -> String {
+  if start == end {
+    return "\(start)" // if a start num and a last num are the same, return just the num
+  } else {
+    return "\(start)->\(end)" // if start and end are different, return the list of the range
+  }
+}

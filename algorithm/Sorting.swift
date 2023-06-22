@@ -172,3 +172,31 @@ func findContentChildren(_ g: [Int], _ s: [Int]) -> Int {
   
   return i
 }
+
+
+func findRelativeRanks(_ score: [Int]) -> [String] {
+  var scoreToIndex = [Int: Int]()
+  for (index, value) in score.enumerated() {
+    // store original index as a value and original score as a key
+    scoreToIndex[value] = index
+  }
+  
+  let sortedScores = score.sorted(by: >) // sort each score in desending order
+  var result = [String](repeating: "", count: score.count) // difine a array that has empty value which have a index.
+  
+  // rewrite the score to string
+  for (rank, score) in sortedScores.enumerated() {
+    switch rank {
+    case 0:
+      result[scoreToIndex[score]!] = "Gold Medal"  // asign each score to the result at the same index between scoreToIndex to result
+    case 1:
+      result[scoreToIndex[score]!] = "Silver Medal"
+    case 2:
+      result[scoreToIndex[score]!] = "Bronze Medal"
+    default:
+      result[scoreToIndex[score]!] = "\(rank + 1)"
+    }
+  }
+  
+  return result
+}

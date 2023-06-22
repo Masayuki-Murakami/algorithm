@@ -45,6 +45,8 @@ print(addBinary("11", "1"))
 
 print(isPalindrome("`l;`` 1o1 ??;l`"))
 
+print(titleToNumber("AB"))
+
 
 print("----------(Sort)----------")
 
@@ -68,6 +70,8 @@ print(thirdMax([3,2,1]))
 
 print(findContentChildren([1,2], [1,2,3]))
 
+print(findRelativeRanks([10,3,8,9,4]))
+
 print("----------(BinarySearch)----------")
 
 print(searchInsert([1,3,5,6], 2))
@@ -82,6 +86,8 @@ print(arrangeCoins(5))
 
 print(search([-1,0,3,5,9,12], 9))
 
+print(nextGreatestLetter(["c","f","j"], "c"))
+
 print("----------(Recursion)----------")
 
 testCase1mergeTwoLists()
@@ -93,3 +99,5 @@ print("--")
 print(isPowerOfTow(16))
 print("--")
 testCase3isPalindrome()
+print("--")
+print(isPowerOfThree(27))

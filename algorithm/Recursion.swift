@@ -185,3 +185,17 @@ func testCase3isPalindrome() {
   
   print(result)
 }
+
+func isPowerOfThree(_ n: Int) -> Bool {
+  if n == 0 {  // if n == 0, 0 can't be powewr of three. do return false
+    return false
+  } else if n == 1 { // n == 1, it's power of three
+    return true
+  } else {
+    // if the remainder of 3 divided by n is 0, the n is power of three. it means n can be poewr of three
+    // so divide n by 3 and check if the result is power of three recursively
+    return n % 3 == 0 && isPowerOfThree(n / 3)
+  }
+//  return n > 0 && (n == 1 || n % 3 == 0 && isPowerOfThree(n / 3))
+}
+

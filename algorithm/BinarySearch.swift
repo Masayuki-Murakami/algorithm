@@ -187,3 +187,21 @@ func search(_ nums: [Int], _ target: Int) -> Int {
   
   return -1
 }
+
+func nextGreatestLetter(_ letters: [Character], _ target: Character) -> Character {
+  var low = 0
+  var high = letters.count
+  
+  while low < high {
+    let mid = (low + high) / 2
+    
+    // find the lowest character in letters
+    if letters[mid] <= target {
+      low = mid + 1
+    } else {
+      high = mid
+    }
+  }
+  // if the low is less than letters.count, return itself and heigher than letters.count return the lowest character in letters. 
+  return letters[low % letters.count]
+}

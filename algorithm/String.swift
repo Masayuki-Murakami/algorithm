@@ -196,3 +196,27 @@ func titleToNumber(_ columnTitle: String) -> Int {
   return result
 }
 
+
+func isIsomorphic(_ s: String, _ t: String) -> Bool {
+  var mapS = [Character: Character]()
+  var mapT = [Character: Character]()
+  
+  // loop through both strings in parallel
+  for (charS, charT) in zip(s, t) {
+    // if charS is already in mapS, it must map to the same charT to be isomorphic
+    if mapS[charS] != nil {
+      if mapS[charS] != charT {
+        return false
+      }
+      // if charT is already in mapT but charS isn't in mapS, it means charT is already mapped to different char in s. So it isn't isomorphic
+    } else if mapT[charT] != nil {
+      return false
+    } else {
+      // if neither charS is in mapS nor charT is in mapT, store thire mapping
+      mapS[charS] = charT
+      mapT[charT] = charS
+    }
+  }
+  
+  return true
+}

@@ -199,3 +199,12 @@ func isPowerOfThree(_ n: Int) -> Bool {
 //  return n > 0 && (n == 1 || n % 3 == 0 && isPowerOfThree(n / 3))
 }
 
+func isPowerOfFour(_ n: Int) -> Bool {
+  if n == 0 {
+    return false
+  } else if n == 1 {
+    return true
+  } else {
+    return n % 4 == 0 && isPowerOfFour(n / 4)
+  }
+}

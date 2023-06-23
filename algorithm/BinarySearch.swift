@@ -205,3 +205,18 @@ func nextGreatestLetter(_ letters: [Character], _ target: Character) -> Characte
   // if the low is less than letters.count, return itself and heigher than letters.count return the lowest character in letters. 
   return letters[low % letters.count]
 }
+
+func fairCandySwap(_ aliceSizes: [Int], _ bobSizes: [Int]) -> [Int] {
+  // get the sum of each array and difference between sumA and sumB
+  let sumA = aliceSizes.reduce(0, +)
+  let sumB = bobSizes.reduce(0, +)
+  let diff = (sumB - sumA) / 2
+  
+  for size in aliceSizes {
+    if bobSizes.contains(size + diff) { // if there is the same num that is size + diff, exchanging the size and size + diff. Then the difference will be 0.
+      return [size, size + diff]
+    }
+  }
+  
+  return []
+}

@@ -209,3 +209,20 @@ func formatRange(start: Int, end: Int) -> String {
     return "\(start)->\(end)" // if start and end are different, return the list of the range
   }
 }
+
+
+func moveZeroes(_ nums: inout [Int]) -> [Int] {
+  // initalize a last index that is founded non zore num
+  var lastIndex = 0
+  
+  for i in 0..<nums.count {
+    // if nums[i] isn't 0, swap nums[i] to 0
+    if nums[i] != 0 {
+      nums.swapAt(i, lastIndex)
+      lastIndex += 1
+    }
+  }
+  
+  return nums
+}
+

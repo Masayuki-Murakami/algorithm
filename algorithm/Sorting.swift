@@ -200,3 +200,17 @@ func findRelativeRanks(_ score: [Int]) -> [String] {
   
   return result
 }
+
+// Only an even num of the stored array is put into the sum. and return the sum
+// In a sorted array, even nums are smaller than thire neibors, so satisfying the requirement of the problem of adding up the minimum value of each pair.
+func arrayPairSum(_ nums: [Int]) -> Int {
+  let sorted = nums.sorted()
+  var sum = 0
+  
+  for i in 0..<sorted.count {
+    if i % 2 == 0 {
+      sum += sorted[i]
+    }
+  }
+  return sum
+}

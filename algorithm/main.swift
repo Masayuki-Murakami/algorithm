@@ -28,6 +28,11 @@ print(singleNumber([4,1,2,1,2]))
 
 print(containsNearbyDuplicate([1,2,3,1], 3))
 
+print(summaryRanges([0,1,2,4,5,7]))
+
+var num2 = [0,1,0,3,12]
+print(moveZeroes(&num2))
+
 print("----------(String)----------")
 
 print(romanToInt("MCMXCIV"))
@@ -72,6 +77,8 @@ print(findContentChildren([1,2], [1,2,3]))
 
 print(findRelativeRanks([10,3,8,9,4]))
 
+print(arrayPairSum([1,4,3,2]))
+
 print("----------(BinarySearch)----------")
 
 print(searchInsert([1,3,5,6], 2))
@@ -88,6 +95,8 @@ print(search([-1,0,3,5,9,12], 9))
 
 print(nextGreatestLetter(["c","f","j"], "c"))
 
+print(fairCandySwap([1,1], [2,2]))
+
 print("----------(Recursion)----------")
 
 testCase1mergeTwoLists()
@@ -101,3 +110,4 @@ print("--")
 testCase3isPalindrome()
 print("--")
 print(isPowerOfThree(27))
+print(isPowerOfFour(16))

@@ -19,6 +19,7 @@ public class ListNode {
   public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }
 
+//21. Merge Two Sorted Lists
 func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
   // get a first node two of nodes as node1 and node2
   // Recursion must have closiong statement.
@@ -59,6 +60,8 @@ func testCase1mergeTwoLists() {
 
 }
 
+
+//203. Remove Linked List Elements
 func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
   guard let head = head else {
     return nil
@@ -96,6 +99,8 @@ func testCase2removeElements() {
 
 }
 
+
+//206. Reverse Linked List
 // [1,2,3,4] -> [4,3,2,1]
 func reverseList(_ head: ListNode?) -> ListNode? {
   guard let head = head else {
@@ -129,7 +134,7 @@ func testCase3reverseList() {
   }
 }
 
-
+//231. Power of Two
 func isPowerOfTow(_ n: Int) -> Bool {
   if n <= 0 {
     return false
@@ -150,6 +155,8 @@ private func helperPowerOfTwo(_ num: Int) -> Bool {
   return false
 }
 
+
+//234. Palindrome Linked List
 var pointer: ListNode?
 
 func isPalindrome(_ head: ListNode?) -> Bool {
@@ -186,6 +193,7 @@ func testCase3isPalindrome() {
   print(result)
 }
 
+//326. Power of Three
 func isPowerOfThree(_ n: Int) -> Bool {
   if n == 0 {  // if n == 0, 0 can't be powewr of three. do return false
     return false
@@ -199,6 +207,7 @@ func isPowerOfThree(_ n: Int) -> Bool {
 //  return n > 0 && (n == 1 || n % 3 == 0 && isPowerOfThree(n / 3))
 }
 
+//342. Power of Four
 func isPowerOfFour(_ n: Int) -> Bool {
   if n == 0 {
     return false

@@ -7,6 +7,7 @@
 
 import Foundation
 
+//88. Merge Sorted Array
 func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
   // difine the last nums of m and n and sum of m and n. The sum will be the result. Store each num in the sum.
   var last1 = m - 1
@@ -35,7 +36,7 @@ func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
   }
 }
 
-
+//169. Majority Element
 func majorityElement(_ nums: [Int]) -> Int {
   var majority = nums[0] // Set a tentative(暫定的な) majority element
   var count = 1 // initalize number of times the majority element appears
@@ -56,7 +57,7 @@ func majorityElement(_ nums: [Int]) -> Int {
   return majority
 }
 
-
+//217. Contains Duplicate
 // Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 func containsDuplicate(_ nums: [Int]) -> Bool {
   // define a new set to store unique num.
@@ -74,6 +75,7 @@ func containsDuplicate(_ nums: [Int]) -> Bool {
   return false
 }
 
+//242. Valid Anagram
 func isAnagram(_ s: String, _ t: String) -> Bool {
   // make each sorted String. the sorted method make a string in order base on Unicode. It means s: anagram, t: nagaram -> "aagmnr"
   let sortedS = s.sorted()
@@ -82,6 +84,7 @@ func isAnagram(_ s: String, _ t: String) -> Bool {
   return sortedS == sortedT
 }
 
+//349. Intersection of Two Arrays
 // nums1: [1,2,2], nums2: [2,3,4] -> [2]
 func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
   let set1 = Set(nums1)
@@ -96,7 +99,7 @@ func intersectionOneLine(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
   Array(Set(nums1).intersection(Set(nums2)))
 }
 
-
+//350. Intersection of Two Arrays II
 func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
   let sorted1 = nums1.sorted() // [1,2,2,1] -> [1,1,2,2]
   let sorted2 = nums2.sorted() // [9,4,9,8] -> [4,8,9,9]
@@ -123,7 +126,7 @@ func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
   return intersect
 }
 
-
+//389. Find the Difference
 func findTheDifference(_ s: String, _ t: String) -> Character {
   // difine a dictonary to store each value and a count num of the same chracter of the each string
   var charCount: [Character: Int] = [:]
@@ -144,6 +147,7 @@ func findTheDifference(_ s: String, _ t: String) -> Character {
   return charCount.keys.first!
 }
 
+//414. Third Maximum Number
 func thirdMax(_ nums: [Int]) -> Int {
   // create a new array wiht unique elements, sorted by nums in descending order
   let sortedNums = Array(Set(nums)).sorted(by: >)
@@ -155,6 +159,8 @@ func thirdMax(_ nums: [Int]) -> Int {
   return sortedNums[2]
 }
 
+
+//455. Assign Cookies
 func findContentChildren(_ g: [Int], _ s: [Int]) -> Int {
   let children = g.sorted()
   let cookies = s.sorted()
@@ -173,7 +179,7 @@ func findContentChildren(_ g: [Int], _ s: [Int]) -> Int {
   return i
 }
 
-
+//506. Relative Ranks
 func findRelativeRanks(_ score: [Int]) -> [String] {
   var scoreToIndex = [Int: Int]()
   for (index, value) in score.enumerated() {
@@ -201,6 +207,8 @@ func findRelativeRanks(_ score: [Int]) -> [String] {
   return result
 }
 
+
+//561. Array Partition
 // Only an even num of the stored array is put into the sum. and return the sum
 // In a sorted array, even nums are smaller than thire neibors, so satisfying the requirement of the problem of adding up the minimum value of each pair.
 func arrayPairSum(_ nums: [Int]) -> Int {

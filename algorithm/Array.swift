@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// 1.Two Sum
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 // Time complexity O(n^2)
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
@@ -23,6 +23,8 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
   fatalError("Invalid input")
 }
 
+
+//26. Remove Duplicates from Sorted Array
 // Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
 func removeDuplicates(_ nums: inout [Int]) -> Int {
   if nums.isEmpty {
@@ -42,7 +44,7 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
   return k + 1
 }
 
-
+//27. Remove Element
 func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
   // Initalaize k to count nums that are not equal to val
   var k = 0
@@ -57,7 +59,7 @@ func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
   return k
 }
 
-
+//66. Plus One
 func plusOne(_ digits: [Int]) -> [Int] {
   // copy the digits to change a element of the array. Because a parameter is let
   var digits = digits
@@ -77,6 +79,7 @@ func plusOne(_ digits: [Int]) -> [Int] {
   return digits
 }
 
+//118. Pascal's Triangle
 // numsRow: 5 -> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 func generate(_ numRows: Int) -> [[Int]] {
   // define a two dimensional(二次元) array
@@ -104,7 +107,7 @@ func generate(_ numRows: Int) -> [[Int]] {
   return result
 }
 
-
+//119. Pascal's Triangle II
 func getRow(_ rowIndex: Int) -> [Int] {
   var result: [[Int]] = []
   
@@ -130,6 +133,7 @@ func getRow(_ rowIndex: Int) -> [Int] {
   return result.last!
 }
 
+//121. Best Time to Buy and Sell Stock
 func maxProfit(_ prices: [Int]) -> Int {
   // if assigned 0 in the minPrice, the value of minPrice never change. So it has to be sssigned first price as the minPrice appropriately
   var minPrice = Int.max
@@ -144,6 +148,7 @@ func maxProfit(_ prices: [Int]) -> Int {
   return maxProfit
 }
 
+//136. Single Number
 // Using XOR.
 func singleNumber(_ nums: [Int]) -> Int {
   var single = 0
@@ -157,6 +162,7 @@ func singleNumber(_ nums: [Int]) -> Int {
   return single
 }
 
+//219. Contains Duplicate II
 func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
   // difine a dictonary to store a num and the index of the num
   var dict = [Int: Int]()
@@ -175,6 +181,7 @@ func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
   return false
 }
 
+//228. Summary Ranges 
 func summaryRanges(_ nums: [Int]) -> [String] {
   var result = [String]()
   
@@ -210,7 +217,7 @@ func formatRange(start: Int, end: Int) -> String {
   }
 }
 
-
+//283. Move Zeroes
 func moveZeroes(_ nums: inout [Int]) -> [Int] {
   // initalize a last index that is founded non zore num
   var lastIndex = 0

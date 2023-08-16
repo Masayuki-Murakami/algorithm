@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+//35. Search Insert Position
 // nums: [1,3,5,6], target: 2
 func searchInsert(_ nums: [Int], _ target: Int) -> Int {
   var left = 0
@@ -28,6 +30,7 @@ func searchInsert(_ nums: [Int], _ target: Int) -> Int {
   return left
 }
 
+//69. Sqrt(x)
 func mySqrt(_ x: Int) -> Int {
   if x == 1 || x == 0 {
     return x
@@ -52,6 +55,7 @@ func mySqrt(_ x: Int) -> Int {
   return left - 1
 }
 
+//268. Missing Number
 // Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 func missingNumber(_ nums: [Int]) -> Int {
   let n = nums.count
@@ -60,7 +64,7 @@ func missingNumber(_ nums: [Int]) -> Int {
   return expectedSum - actualSum
 }
 
-
+//278. First Bad Version
 //func firstBadVersion(_ n: Int) -> Int {
 //  var left = 1
 //  var right = n
@@ -92,6 +96,7 @@ public class TreeNode {
   }
 }
 
+//108. Convert Sorted Array to Binary Search Tree
 func sortedArrayToBST(_ nums: [Int]) -> TreeNode? {
   return helperBST(nums, 0, nums.count - 1)
 }
@@ -111,7 +116,7 @@ private func helperBST(_ nums: [Int], _ left: Int, _ right: Int) -> TreeNode? {
   return root
 }
 
-
+//367. Valid Perfect Square
 func isPerfectSquare(_ num: Int) -> Bool {
   var left = 0
   var right = num
@@ -130,7 +135,7 @@ func isPerfectSquare(_ num: Int) -> Bool {
   return false
 }
 
-
+//374. Guess Number Higher or Lower
 //func guessNumber(_ n: Int) -> Int {
 //  var left = 0
 //  var right = n
@@ -149,6 +154,7 @@ func isPerfectSquare(_ num: Int) -> Bool {
 //}
 
 
+//441. Arranging Coins
 func arrangeCoins(_ n: Int) -> Int {
   // define a min and max term number
   var left = 0
@@ -169,6 +175,8 @@ func arrangeCoins(_ n: Int) -> Int {
   return right
 }
 
+
+//704. Binary Search
 func search(_ nums: [Int], _ target: Int) -> Int {
   var left = 0
   var right = nums.count - 1
@@ -188,6 +196,8 @@ func search(_ nums: [Int], _ target: Int) -> Int {
   return -1
 }
 
+//744. Find Smallest Letter Greater Than Target
+
 func nextGreatestLetter(_ letters: [Character], _ target: Character) -> Character {
   var low = 0
   var high = letters.count
@@ -206,6 +216,8 @@ func nextGreatestLetter(_ letters: [Character], _ target: Character) -> Characte
   return letters[low % letters.count]
 }
 
+
+//888. Fair Candy Swap
 func fairCandySwap(_ aliceSizes: [Int], _ bobSizes: [Int]) -> [Int] {
   // get the sum of each array and difference between sumA and sumB
   let sumA = aliceSizes.reduce(0, +)

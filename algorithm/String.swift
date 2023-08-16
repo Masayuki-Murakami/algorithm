@@ -7,6 +7,7 @@
 
 import Foundation
 
+//13. Roman to Integer
 func romanToInt(_ s: String) -> Int {
   let romanToInteger: [Character: Int] = [
     "I": 1,
@@ -39,7 +40,7 @@ func romanToInt(_ s: String) -> Int {
   return result
 }
 
-
+//14. Longest Common Prefix
 func longestCommonPrefix(_ strs: [String]) -> String {
   // if strs is empty return empty string
   guard let firstStr = strs.first else {
@@ -64,6 +65,8 @@ func longestCommonPrefix(_ strs: [String]) -> String {
   return prefix
 }
 
+
+//20. Valid Parentheses
 // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 func isValid(_ s: String) -> Bool {
   
@@ -86,6 +89,7 @@ func isValid(_ s: String) -> Bool {
   return stack.isEmpty
 }
 
+//28. Find the Index of the First Occurrence in a String
 // Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 func strStr(_ haystack: String, _ needle: String) -> Int {
   let n = haystack.count
@@ -108,7 +112,7 @@ func strStr(_ haystack: String, _ needle: String) -> Int {
   return -1
 }
 
-
+//58. Length of Last Word
 func lengthOfLastWord(_ s: String) -> Int {
   // remove sapaces at the begining and end.
   let removeSpases = s.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -123,7 +127,7 @@ func lengthOfLastWord(_ s: String) -> Int {
   }
 }
 
-
+//67. Add Binary
 // Given two binary strings a and b, return their sum as a binary string. ex. a: 1010, b: 1011 -> 10101
 func addBinary(_ a: String, _ b: String) -> String {
   // separete each num into a array
@@ -154,7 +158,7 @@ func addBinary(_ a: String, _ b: String) -> String {
   return result
 }
 
-
+//125. Valid Palindrome
 func isPalindrome(_ s: String) -> Bool {
   let remove1 = s.replacingOccurrences(of: " ", with: "")   // remove spaces
   let remove2 = String(remove1.filter{ $0.isLetter || $0.isNumber })  // remove non-alphanumeric characters
@@ -167,6 +171,7 @@ func isPalindrome(_ s: String) -> Bool {
   return false
 }
 
+// 168. Excel Sheet Column Title
 // 1 -> A, 28 -> AB, 701 -> ZY
 func convertToTitle(_ columnNumber: Int) -> String {
   var n = columnNumber
@@ -182,6 +187,7 @@ func convertToTitle(_ columnNumber: Int) -> String {
   return result
 }
 
+//171. Excel Sheet Column Number
 // convert 26 hex to 10 hex
 func titleToNumber(_ columnTitle: String) -> Int {
   let letters: [Character: Int] = [ "A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7, "H": 8, "I": 9,
@@ -196,7 +202,7 @@ func titleToNumber(_ columnTitle: String) -> Int {
   return result
 }
 
-
+//205. Isomorphic Strings
 func isIsomorphic(_ s: String, _ t: String) -> Bool {
   var mapS = [Character: Character]()
   var mapT = [Character: Character]()
